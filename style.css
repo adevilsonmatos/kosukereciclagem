@@ -1,0 +1,176 @@
+/* Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do Body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.5;
+    background-color: #f4f4f9;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+/* Container Principal */
+.container {
+    max-width: 640px; /* Reduzi de 800px para 640px */
+    width: 100%;
+    background: #fff;
+    border-radius: 6px; /* Reduzi de 8px para 6px */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.1); /* Leve redução no sombreado */
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Estilo do botão "Saiba mais" */
+#saiba-mais-btn {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#saiba-mais-btn:hover {
+    background-color: #45a049;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Cabeçalho */
+header {
+    background: #4CAF50;
+    color: #fff;
+    padding: 16px; /* Reduzi de 20px para 16px */
+    text-align: center;
+}
+
+header h1 {
+    font-size: 1.4rem; /* Reduzi de 1.8rem para 1.4rem */
+}
+
+/* Main */
+main {
+    flex: 1;
+    padding: 16px; /* Reduzi de 20px para 16px */
+    text-align: center;
+    overflow-y: auto; /* Adiciona rolagem caso necessário */
+}
+
+/* Página */
+.page {
+    display: none;
+}
+
+.page.active {
+    display: block;
+}
+
+/* Títulos e Parágrafos */
+.page h2 {
+    font-size: 1.3rem; /* Reduzi de 1.6rem para 1.3rem */
+    margin-bottom: 8px; /* Reduzi de 10px para 8px */
+}
+
+.page p {
+    font-size: 0.8rem; /* Reduzi de 1rem para 0.8rem */
+    margin-bottom: 16px; /* Reduzi de 20px para 16px */
+}
+
+/* Imagem Responsiva */
+.responsive-image {
+    max-width: 100%;
+    height: auto;
+    margin: 16px 0; /* Reduzi de 20px para 16px */
+}
+
+/* Botões de Navegação */
+footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px; /* Reduzi de 10px 20px para 8px 16px */
+    background: #f4f4f4;
+    border-top: 1px solid #ddd;
+}
+
+button {
+    padding: 8px 16px; /* Reduzi de 10px 20px para 8px 16px */
+    font-size: 14px; /* Reduzi de 16px para 14px */
+    border: none;
+    border-radius: 3px; /* Reduzi de 4px para 3px */
+    cursor: pointer;
+    background: #4CAF50;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+button:disabled {
+    background: #ddd;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background: #45a049;
+}
+
+/* Estilos Responsivos */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.1rem; /* Reduzi de 1.4rem para 1.1rem */
+    }
+
+    .page h2 {
+        font-size: 1.1rem; /* Reduzi de 1.4rem para 1.1rem */
+    }
+
+    .page p {
+        font-size: 0.7rem; /* Reduzi de 0.9rem para 0.7rem */
+    }
+
+    button {
+        padding: 6px 12px; /* Reduzi de 8px 16px para 6px 12px */
+        font-size: 12px; /* Reduzi de 14px para 12px */
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1rem; /* Reduzi de 1.2rem para 1rem */
+        padding: 12px; /* Reduzi de 15px para 12px */
+    }
+
+    .page h2 {
+        font-size: 1rem; /* Reduzi de 1.2rem para 1rem */
+    }
+
+    .page p {
+        font-size: 0.6rem; /* Reduzi de 0.8rem para 0.6rem */
+    }
+
+    button {
+        padding: 5px 10px; /* Reduzi de 6px 12px para 5px 10px */
+        font-size: 10px; /* Reduzi de 12px para 10px */
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px; /* Reduzi de 10px para 8px */
+    }
+}
